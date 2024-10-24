@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number with Span Background</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+      }
+
+      h1 {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        font-size: 5em;
+        color: rgba(0, 0, 0, 0.5); /* 50% opacity */
+        z-index: 1; /* Above the span */
+      }
+
+      /* The span behind the number */
+      span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: red;
+        z-index: 0;
+        transition: width 1s;
+      }
+
+      /* Hover effect to expand the red background */
+      h1:hover span {
+        width: 100%;
+      }
+
+      .container {
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Number 4 inside h1 -->
+      <h1>
+        4
+        <!-- Span for background color, initially hidden -->
+        <span></span>
+      </h1>
+    </div>
+  </body>
+</html>

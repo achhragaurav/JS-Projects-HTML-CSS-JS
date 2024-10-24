@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Afacad Flux", sans-serif;
+}
+
+body,
+html {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #000;
+}
+nav {
+  display: flex;
+  width: 100%;
+  height: 90px;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  font-family: "Afacad Flux", sans-serif;
+  z-index: 5;
+}
+nav .logo {
+  padding: 20px;
+  opacity: 0;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+nav ul li {
+  padding: 15px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.backdrop {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-image: url("https://images.pexels.com/photos/5418830/pexels-photo-5418830.jpeg?auto=compress&cs=tinysrgb&w=5851&h=3901&dpr=1");
+  background-size: cover;
+  background-position: center;
+}
+
+.blr {
+  width: 53vw;
+  height: 100vh;
+  position: absolute;
+  backdrop-filter: blur(0px);
+  z-index: 1;
+}
+
+.text {
+  opacity: 0;
+  width: 100vw;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2vw;
+  font: bolder 6vw "serif";
+  text-align: center;
+  background-image: url("https://images.pexels.com/photos/5418830/pexels-photo-5418830.jpeg?auto=compress&cs=tinysrgb&w=5851&h=3901&dpr=1");
+  background-size: cover;
+  background-position: center;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-clip: text;
+  font-weight: 500;
+  z-index: 2;
+  font-family: "Lora", serif;
+}
+.text span {
+  color: rgba(255, 255, 255, 0.849);
+  font: bolder 6vw "serif";
+  font-weight: 500;
+  font-family: "Lora", serif;
+}
+.social {
+  display: flex;
+  width: 100%;
+  height: 150px;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(255, 255, 255);
+  z-index: 5;
+  padding: 30px;
+}
+.social i {
+  padding: 10px;
+}
+
+.social .tags i {
+  opacity: 0;
+}
+.social .buttons button {
+  background: transparent;
+  outline: none;
+  border: none;
+  color: #fff;
+  margin: 30px;
+  opacity: 0;
+}

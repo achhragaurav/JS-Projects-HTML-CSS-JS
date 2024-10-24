@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+    ></script>
+    <script src="./main.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather">
+        <div class="logo"><h4>the.weather</h4></div>
+        <div class="weather-widget">
+          <div class="widget-temp">
+            <h1>
+              08 <span><i class="fa-regular fa-circle"></i></span>
+            </h1>
+          </div>
+          <div class="widget-loc-time">
+            <div class="area">
+              <h3>
+                London
+                <span id="weather_logo"
+                  ><i class="fa-solid fa-cloud-showers-heavy"></i
+                ></span>
+              </h3>
+
+              <time datetime="06:09-Sunday, 6 Oct 19">
+                06:09-Sunday, 6 Oct 19
+              </time>
+              >
+            </div>
+          </div>
+          <div class="widget-weather-type"></div>
+        </div>
+      </div>
+      <div class="locations">
+        <div class="search">
+          <input type="text" placeholder="Another Location" />
+          <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="list">
+          <ul>
+            <li id="new york">New York City, USA</li>
+            <li id="london">London, UK</li>
+            <li id="paris">Paris, France</li>
+            <li id="tokyo">Tokyo, Japan</li>
+            <li id="sydney">Sydney, Australia</li>
+            <li id="berlin">Berlin, Germany</li>
+            <li id="moscow">Moscow, Russia</li>
+            <li id="dubai">Dubai, UAE</li>
+            <li id="mumbai">Mumbai, India</li>
+            <li id="rio de janeiro">Rio de Janeiro, Brazil</li>
+            <li id="toronto">Toronto, Canada</li>
+            <li id="cape town">Cape Town, South Africa</li>
+            <li id="bangkok">Bangkok, Thailand</li>
+            <li id="cairo">Cairo, Egypt</li>
+            <li id="beijing">Beijing, China</li>
+            <li id="mexico">Mexico City, Mexico</li>
+            <li id="istanbul">Istanbul, Turkey</li>
+            <li id="seoul">Seoul, South Korea</li>
+            <li id="singapore">Singapore, Singapore</li>
+            <li id="los angeles">Los Angeles, USA</li>
+          </ul>
+        </div>
+        <div class="weather_md">
+          <span class="line"></span>
+          <h3>Weather Details</h3>
+          <ul>
+            <li>
+              <span id="cloud_status">Cloudy</span>
+              <span id="cloud_percent">86%</span>
+            </li>
+            <li>
+              <span>Humidity</span>
+              <span id="humidity_percent">86%</span>
+            </li>
+            <li>
+              <span>Wind</span>
+              <span id="wind_kph">86kph</span>
+            </li>
+            <li>
+              <span>Rain</span>
+              <span id="rain_percent">86%</span>
+            </li>
+          </ul>
+          <span class="line"></span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

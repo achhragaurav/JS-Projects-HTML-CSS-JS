@@ -1,0 +1,164 @@
+/* .container {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid #000;
+}
+
+.container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  color: white;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.container-inner {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.content-gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content-gallery ul {
+  display: flex;
+}
+.content-gallery li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 300px;
+  height: 800px;
+  overflow: hidden;
+  margin: 10px;
+  position: relative;
+  flex-direction: column;
+}
+.content-gallery li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  z-index: 5;
+}
+.overlay {
+  position: absolute;
+  z-index: 10;
+  background: rgb(0, 0, 0);
+  height: 100%;
+  width: 300px;
+  top: 0%;
+}
+.content-gallery li .content {
+  position: absolute;
+  width: 100%;
+  height: 110%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 11;
+  opacity: 0;
+  background-color: #00000034;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+}
+.numbers-for-li {
+  display: flex;
+  position: absolute;
+  top: 70%;
+  width: 70vw;
+  align-items: center;
+  justify-content: space-around;
+}
+/* .number {
+  z-index: 12;
+  font-size: 10em;
+  color: #000;
+  position: relative;
+  opacity: 0.5;
+}
+.number h1::before {
+  content: attr(number);
+  position: absolute;
+  left: 0;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  color: white;
+  z-index: -1;
+  transition: top 0.5s ease-in-out;
+}
+.number h1::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  color: green;
+  overflow: hidden;
+
+  width: 0%;
+  transition: 1s;
+}
+
+h1:hover::before {
+  width: 100%;
+} */
+.number {
+  position: relative;
+  font-size: 10em;
+  color: rgba(0, 0, 0, 0.5); /* 50% opacity */
+  z-index: 12;
+}
+
+/* Before pseudo-element for hover effect */
+.number h1::before {
+  content: attr(data-number); /* Use the data-number attribute */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: red;
+  color: white;
+  z-index: -1; /* Behind the actual number */
+  overflow: hidden;
+  transition: width 1s ease-in-out;
+}
+
+/* On hover, the span width expands to 100% */
+.number h1:hover::before {
+  width: 100%;
+}
