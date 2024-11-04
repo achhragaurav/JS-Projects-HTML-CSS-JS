@@ -11,7 +11,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: black;
+  background: url("https://images.pexels.com/photos/163891/italy-sicily-sea-ocean-163891.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -26,6 +26,7 @@ body {
   display: flex;
   flex-direction: column;
   color: white;
+  backdrop-filter: blur(20px);
 }
 .content {
   width: 100%;
@@ -61,20 +62,7 @@ nav .buttons button {
   justify-content: center;
   flex-wrap: wrap;
 }
-.content-img {
-  flex-basis: 60%;
-  min-width: 300px; /* Adjust as needed */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  z-index: 10;
-  position: relative;
-}
-.content-img img {
-  width: 70%;
-  height: auto;
-}
+
 .content-form {
   width: 40%;
   height: 70%;
